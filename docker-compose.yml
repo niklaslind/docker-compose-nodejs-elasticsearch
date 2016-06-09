@@ -1,0 +1,27 @@
+elasticsearch:
+  image: elasticsearch:latest
+  command: elasticsearch -Des.network.host=0.0.0.0
+  ports:
+    - "9200:9200"
+    - "9300:9300"    
+  volumes:
+    - data:/usr/share/elasticsearch/data
+
+
+web:
+  build: webapp
+  ports:
+    - "3000:3000"
+  links:
+    - elasticsearch:elasticsearch
+  volumes:
+    - ./webapp/src:/src
+
+
+
+data:
+  image: cogniteev/echo
+  command: echo 'Data Container for Elasticsearch'
+  volumes:
+    - /Users/nli/tmp/elasticsearch/data
+
