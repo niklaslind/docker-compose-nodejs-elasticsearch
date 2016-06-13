@@ -1,7 +1,7 @@
 
-# Docker-compose for elasticsearch with data volume and nodejs
+# Docker-compose for nodejs and elasticsearch with data volume
 
-Use [https://docs.docker.com/compose/](docker-compose) to start docker containers:
+Use [docker-compose](https://docs.docker.com/compose/) to start docker containers:
 
  - nodejs
  - elasticsearch
@@ -14,7 +14,20 @@ A simple demo project for docker-compose config for
 nodejs+elasticsearch that we will use as base for other projects based
 on nodejs+elasticsearch.
 
-## Manage docker host with docker-machine (OSX)
+
+## Prereq
+
+The stuff you need to get going:
+
+    install [docker-machine](https://docs.docker.com/machine/) (OSX)
+    install [docker-compose](https://docs.docker.com/compose/)
+    git clone <this project>
+        
+Note: You do not need nodejs or elasticsearch installed on your host
+machine. It's all installed in the docker containers.    
+    
+
+## Manage docker host with [docker-machine](https://docs.docker.com/machine/) (OSX)
 
 Get docker host settings:
 
@@ -36,7 +49,7 @@ or just start the default host:
 ## Manage dockers with docker-compose
 
 
-List dockers, bring them up, down...
+Using [docker-compose config file](./docker-compose.yml). List dockers, bring them up, down...
 
     docker-compose ps
     docker-compose up
