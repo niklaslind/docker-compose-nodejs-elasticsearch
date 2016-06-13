@@ -4,6 +4,7 @@
 Use [docker-compose](https://docs.docker.com/compose/) to start docker containers:
 
  - nodejs
+ - Kibana
  - elasticsearch
  - data container for elasticsearch
 
@@ -11,8 +12,8 @@ Use [docker-compose](https://docs.docker.com/compose/) to start docker container
 ## Purpose
 
 A simple demo project for docker-compose config for
-nodejs+elasticsearch that we will use as base for other projects based
-on nodejs+elasticsearch.
+nodejs+kibana+elasticsearch that we will use as base for other
+projects based on nodejs+elasticsearch.
 
 
 ## Prereq
@@ -72,4 +73,7 @@ open web browser to nodejs:
     
     open http://$DOCKER_HOST_IP:3000
     
+    
+open web browser to kibana:    
    
+    open http://$DOCKER_HOST_IP:5601
